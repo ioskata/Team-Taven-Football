@@ -1,0 +1,22 @@
+Classes:
+GameObject : Its abstract class Everything in the game is GameObject
+	1 There is property called Name
+	2 There is property Position which is new structure Vector2D
+	3 There is Active when true the game object is active when false it is not
+
+
+Structures:
+Vector2D
+	Vector 2D have 3 properties X and Y and PointZero 
+				X is float 
+				Y is float
+				PointZero is static Vector2D with coordinates x: 0, y: 0
+				Implement operators for +, -, *, /, == and !=
+
+
+Interfaces:
+IGameObject : It requires implementation of all properties in the GameObject
+IMovable : It gives a method called Move(Vector2D positionToGoTo) will move GameObject vector to the vector in the method
+
+Enumarations:
+Color: It has colors like Red, Blue, etc
