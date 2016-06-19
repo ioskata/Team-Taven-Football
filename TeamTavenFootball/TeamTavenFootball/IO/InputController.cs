@@ -1,15 +1,13 @@
-﻿namespace TeamTavenFootball.GO
+﻿namespace TeamTavenFootball.IO
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
-    using TeamTavenFootball.Interfaces;
 
-    public abstract class GameObject : IGameObject , IShape
+    public static class InputController
     {
 
     }
 }
-

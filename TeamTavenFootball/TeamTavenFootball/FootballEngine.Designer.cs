@@ -30,31 +30,27 @@ namespace TeamTavenFootball
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.components = new System.ComponentModel.Container();
+            this.update = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // update
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(650, 54);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.update.Enabled = true;
+            this.update.Interval = 10;
+            this.update.Tick += new System.EventHandler(this.Update);
             // 
             // FootballEngine
             // 
-            this.ClientSize = new System.Drawing.Size(896, 398);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(284, 261);
             this.Name = "FootballEngine";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private PictureBox pictureBox1;
+        private Timer update;
     }
 }
 

@@ -1,7 +1,7 @@
 ﻿namespace TeamTavenFootball.Enumerators
 {
-    public enum Color
+    public enum Shape
     {
-        
+
     }
 }

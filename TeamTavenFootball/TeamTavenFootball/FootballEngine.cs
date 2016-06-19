@@ -17,6 +17,14 @@
             InitializeComponent();
         }
 
+        /// <summary>
+        /// This is the method that calls 60 times per second
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Update(object sender, EventArgs e)
+        {
 
+        }
     }
 }
