@@ -3,7 +3,7 @@
     using TeamTavenFootball.GO;
     using TeamTavenFootball.Interfaces;
 
-    public abstract class Ball : GameObject, IShape, IMovable
+    public abstract class Ball : GameObject, IShape, IMovable, IName, IColor
     {
 
     }

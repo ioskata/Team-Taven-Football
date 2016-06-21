@@ -4,7 +4,8 @@
     using System.Windows.Forms;
     using TeamTavenFootball.GO;
 
-    public class RadioButton
+    public class RadioButton : UserInteface, IShape, IMovable, IName
     {
+
     }
 }

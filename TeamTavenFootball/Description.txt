@@ -1,6 +1,6 @@
 --------REQUIREMENTS----------
 At least 5 interfaces (with one or more implementations) Ready
-At least 15 classes (implementing the application logic): 7 Classes ready
+At least 15 classes (implementing the application logic): Ready
 At least 3 abstract classes (with inheritors):   Ready
 At least 1 custom exception class (with usage in your code): Not yet
 At least 3 levels of depth in inheritance: Ready
@@ -12,11 +12,12 @@ At least 1 design pattern (e.g. Composite, Singleton, Factory, Wrapper, Bridge, 
 
 
 
-Classes:
+*********************Classes*********************
 GameObject : Its abstract class Everything in the game is GameObject
 	1 There is property called Name
 	2 There is property Position which is new structure Vector2D
 	3 There is Active when true the game object is active when false it is not
+	It should implement all the interfaces it inherits
 
 Player : It is class that creates players on the game
 	Player is inherit of GameObject
@@ -24,7 +25,7 @@ Player : It is class that creates players on the game
 	Player has Color property
 	Player has Vector2 Size property
 	Player has constructor taking parameters vector2 position, int speed, color
-		
+		It should implement all the interfaces it inherits	
 
 InputController : Its static class that checks for inputs
 		It has 4 properties
@@ -32,28 +33,48 @@ InputController : Its static class that checks for inputs
 		If Down Arrow is pressed then Player1Down property will be true
 		If W is pressed then Player Player2Up property will be true
 		If S is pressed then Player Player2Down property will be true
-		There is 8 static void methods
-		First is UpArrowKeyDown which has arguments (object sender, KeyEventArgs e)
-		Second is DownArrowKeyDown which has arguments (object sender, KeyEventArgs e)
-		Third is WKeyDown which has arguments (object sender, KeyEventArgs e)
-		Fourth is SKeyDown which has arguments (object sender, KeyEventArgs e)
-		Fifth is UpArrowKeyUP which has arguments (object sender, KeyEventArgs e)
-		Sixth is DownArrowKeyUP which has arguments (object sender, KeyEventArgs e)
-		Seventh is WKeyUP which has arguments (object sender, KeyEventArgs e)
-		Eighth is SKeyUP which has arguments (object sender, KeyEventArgs e)
+		There is 2 static void methods
+		First is OnKeyDown which has arguments (object sender, KeyEventArgs e) that checks if key is pressed
+		Second is OnKeyUp which has arguments (object sender, KeyEventArgs e) that checks if key stop being pressed
+			It should implement all the interfaces it inherits
 
 UserInteface : It should have Color and it inherits GameObject
+			It should implement all the interfaces it inherits
 
-FootballButton : It should have string Text and it inherits UserInteface and it has Vector2 Size property
+FootballButton : It should have property UIText and it inherits UserInteface and it has Vector2 Size property
+			It should implement all the interfaces it inherits
 
 Ball : It should have property int Radius
-      	
+      		It should implement all the interfaces it inherits
 
 RadioButton it should have property bool isOn
-	    it should have property string Text
-	    
+	    it should have property UIText
+	    	It should implement all the interfaces it inherits
 
-Structures:
+UIText: it should have property Vector2D Size
+	it should have property int FontSize
+	it should have Color
+	It should implement all the interfaces it inherits
+
+FootballDoor : It should have property Vector2D Size
+	       It should have property Color
+	       It should implement all the interfaces it inherits
+
+Wall: It should have vector2 position
+      It should have vector2 Size
+      It should have property Color
+      It should implement all the interfaces it inherits
+
+
+Obstacle:
+	It should have vector2 position
+     	It should have vector2 Size
+     	It should have property Color
+	It should have property bool IsDeadly which check if the obstacle is dangerous or deadly
+	It should implement all the interfaces it inherits
+
+
+*********************Structures*********************
 Vector2D
 	Vector 2D have 3 properties X and Y and PointZero 
 				X is int
@@ -62,13 +83,13 @@ Vector2D
 				Implement operators for +, -, *, /, == and !=
 
 
-Interfaces:
+*********************Interfaces*********************
 IGameObject : It requires implementation of all properties in the GameObject
 IMovable : It gives a method called Move(Vector2D positionToGoTo) will move GameObject vector to the vector in the method
 IShape : it requires property Shape
 IName it requires property Name
 IColor it requires property Color
 
-Enumarations:
+*********************Enumarations*********************
 Color: It has colors like Red, Blue, etc
 Shape: It has circle, rectangle etc

@@ -54,7 +54,9 @@
     <Compile Include="FootballEngine.Designer.cs">
       <DependentUpon>FootballEngine.cs</DependentUpon>
     </Compile>
+    <Compile Include="GO\FootballDoor.cs" />
     <Compile Include="GO\GameObject.cs" />
+    <Compile Include="GO\Obstacle.cs" />
     <Compile Include="Interfaces\IColor.cs" />
     <Compile Include="Interfaces\IGameObject.cs" />
     <Compile Include="Interfaces\IMovable.cs" />
@@ -63,10 +65,12 @@
     <Compile Include="IO\InputController.cs" />
     <Compile Include="Player\Ball.cs" />
     <Compile Include="Player\Player.cs" />
+    <Compile Include="Player\Wall.cs" />
     <Compile Include="StartingPoint.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UI\FootballButton.cs" />
     <Compile Include="UI\RadioButton.cs" />
+    <Compile Include="UI\UIText.cs" />
     <Compile Include="UI\UserInteface.cs" />
     <Compile Include="Vector\Vector2D.cs" />
     <EmbeddedResource Include="FootballEngine.resx">
